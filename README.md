@@ -27,7 +27,7 @@ The pipeline follows the **Medallion Architecture** (Bronze → Silver → Gold)
 ## 🚀 Pipeline Execution & Lineage
 The core of this project is the Delta Live Tables (DLT) pipeline, which automatically manages infrastructure, orchestration, and dependencies.
 
-![DLT Pipeline DAG](./images/dlt_dag.png)
+![DLT Pipeline DAG](https://github.com/iftikar0016/Real-Time-IoT-Streaming-ETL-Pipeline/blob/main/images/Streaming_Pipeline_2.png)
 *(Figure 2: The DLT Directed Acyclic Graph (DAG) visualizing the lineage from ingestion to final aggregation)*
 
 ---
@@ -47,7 +47,7 @@ Merging three independent sensor streams (Temperature, Vibration, Tilt) is compl
 ### 3. Data Quality & Governance (DLT Expectations)
 Used DLT declarative expectations to enforce data quality without stopping the pipeline.
 
-![Data Quality Rules](./images/dlt_expectations.png)
+![Data Quality Rules](https://github.com/iftikar0016/Real-Time-IoT-Streaming-ETL-Pipeline/blob/main/images/Expectation.png)
 *(Figure 3: Real-time data quality enforcement showing records passing and failing validation rules)*
 
 * **Critical Rules:** `expect_or_drop` for null timestamps (prevents downstream corruption).
@@ -70,7 +70,7 @@ Used DLT declarative expectations to enforce data quality without stopping the p
 ## 📊 Final Output (Gold Layer)
 The final `bridge_metrics` table provides aggregated insights ready for dashboarding.
 
-![Gold Table Results](./images/gold_table_results.png)
+![Gold Table Results](https://github.com/iftikar0016/Real-Time-IoT-Streaming-ETL-Pipeline/blob/main/images/Query.png)
 *(Figure 4: Final aggregated metrics calculated over 10-minute tumbling windows)*
 
 ---
