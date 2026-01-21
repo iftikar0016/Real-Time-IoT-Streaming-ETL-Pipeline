@@ -13,7 +13,7 @@ Built on the **Databricks Lakehouse Platform**, this solution leverages **Delta 
 ## 🏗 Architecture
 The pipeline follows the **Medallion Architecture** (Bronze → Silver → Gold) to incrementally improve data quality and structure.
 
-![Architecture Diagram](./images/architecture_diagram.png)
+![Architecture Diagram](https://github.com/iftikar0016/Real-Time-IoT-Streaming-ETL-Pipeline/blob/main/images/architecture.png)
 *(Figure 1: High-level architecture showing data flow from IoT simulation to Gold aggregates)*
 
 ### Data Flow
@@ -48,6 +48,7 @@ Merging three independent sensor streams (Temperature, Vibration, Tilt) is compl
 Used DLT declarative expectations to enforce data quality without stopping the pipeline.
 
 ![Data Quality Rules](https://github.com/iftikar0016/Real-Time-IoT-Streaming-ETL-Pipeline/blob/main/images/Expectation.png)
+
 *(Figure 3: Real-time data quality enforcement showing records passing and failing validation rules)*
 
 * **Critical Rules:** `expect_or_drop` for null timestamps (prevents downstream corruption).
